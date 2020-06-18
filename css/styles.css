@@ -13,16 +13,8 @@ body {
     position: static;
     transform: rotate(0);
   }
-  p {
-    font-size: 1em;
-  }
 }
 
-@media (max-width: 700px) {
-  p {
-    font-size: 24px;
-  }
-}
 
 /* Headings */
 
@@ -122,6 +114,24 @@ p {
 }
 
 /* Description */
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+  div.description-section {
+    font-size: 1em;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  div.description-section {
+    font-size: 30px;
+  }
+}
+
+.description-section {
+  padding: 5%;
+}
 
 .footer-link {
   color: #27496d;
